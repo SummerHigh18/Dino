@@ -1,12 +1,13 @@
 [gd_scene format=4 uid="uid://cqow47bch5ocs"]
 
 [ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://player.gd" id="1_h2yge"]
-[ext_resource type="Texture2D" uid="uid://b0c77k3djsyed" path="res://extra/Sprite-0002.png" id="2_1bvp3"]
+[ext_resource type="Texture2D" uid="uid://c5b8pdrs11q00" path="res://extra/finaldino.png" id="2_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://dbok3y42jtxu6" path="res://extra/Solid_white.png" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://bej048uiesd7p" path="res://extra/Sprite-0003.png" id="4_1bvp3"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
-size = Vector2(83, 115)
+[ext_resource type="Texture2D" uid="uid://u16lx2roa6im" path="res://extra/Sprite-0009.png" id="5_7mycd"]
+[ext_resource type="Texture2D" uid="uid://d20fclao2bb7w" path="res://extra/Sprite-ground.png" id="6_272bh"]
+[ext_resource type="Texture2D" uid="uid://bb8xdn1psqu6d" path="res://extra.png" id="7_272bh"]
+[ext_resource type="PackedScene" uid="uid://blit1jcatfu1q" path="res://heart.tscn" id="8_5vw27"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lquwl"]
 texture = ExtResource("2_h2yge")
@@ -302,9 +303,9 @@ texture = ExtResource("2_h2yge")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
 texture = ExtResource("4_1bvp3")
 0:5/0 = 0
-0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.036044, 8, -5.0102377, 8, 8, -8, 8)
 1:5/0 = 0
-1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.036682, 8, -5.0003843, 8, 8, -8, 8)
 2:5/0 = 0
 3:5/0 = 0
 4:5/0 = 0
@@ -312,9 +313,9 @@ texture = ExtResource("4_1bvp3")
 6:5/0 = 0
 7:5/0 = 0
 0:6/0 = 0
-0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, -0.71943474, 0.5395756, -1.0791512)
 1:6/0 = 0
-1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:6/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, -5.6854305, -1.2183065, -8, -0.71067905)
 2:6/0 = 0
 3:6/0 = 0
 4:6/0 = 0
@@ -322,31 +323,107 @@ texture = ExtResource("4_1bvp3")
 6:6/0 = 0
 7:6/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5vw27"]
+texture = ExtResource("5_7mycd")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.2590103, 0.71943474, 8, 0.71943474, 8, 8, 0.35971832, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 0.71943474, 0.35971832, 0.71943474, 1.6187286, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(0.94724846, -8, 8, -8, 8, 1.260788, 1.0315533, 1.0315528)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 1.7985878, -8, 0.35971832, 0.35971832, -8, 1.6187286)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kek77"]
+texture = ExtResource("6_272bh")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4c57u"]
+texture = ExtResource("7_272bh")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
 [sub_resource type="TileSet" id="TileSet_7mycd"]
 physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lquwl")
 sources/1 = SubResource("TileSetAtlasSource_7mycd")
+sources/2 = SubResource("TileSetAtlasSource_5vw27")
+sources/3 = SubResource("TileSetAtlasSource_kek77")
+sources/4 = SubResource("TileSetAtlasSource_4c57u")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(65, 58)
+
+[sub_resource type="Animation" id="Animation_5vw27"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1684, 388)]
+}
+
+[sub_resource type="Animation" id="Animation_kek77"]
+resource_name = "hover-jump"
+length = 0.46666667
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1684, 388), Vector2(1684, 357)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4c57u"]
+_data = {
+&"RESET": SubResource("Animation_5vw27"),
+&"hover-jump": SubResource("Animation_kek77")
+}
 
 [node name="Node" type="Node" unique_id=991052952]
 
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=658008403]
+texture_filter = 1
+position = Vector2(133.00003, 130.00002)
+scale = Vector2(4.5, 4.5)
+tile_map_data = PackedByteArray("AAAHAAUABAAAAAAAAAAIAAUABAAAAAAAAAAJAAUABAAAAAAAAAAKAAUABAAAAAAAAAALAAUABAAAAAAAAAAMAAUABAAAAAAAAAARAAMAAwAAAAAAAAAOAAYABAAAAAAAAAAPAAYABAAAAAAAAAAQAAYABAAAAAAAAAARAAYABAAAAAAAAAASAAYABAAAAAAAAAATAAYABAAAAAAAAAAUAAYABAAAAAAAAAAVAAYABAAAAAAAAAAUAAQAAwAAAAAAAAAVAAQAAwAAAAAAAAAXAAgAAwAAAAAAAAAYAAgAAwAAAAAAAAAZAAkAAwAAAAAAAAAaAAkAAwAAAAAAAAAbAAoAAwAAAAAAAAAcAAoAAwAAAAAAAAAeAAkABAAAAAAAAAAfAAkABAAAAAAAAAAgAAkABAAAAAAAAAAhAAkABAAAAAAAAAAiAAkABAAAAAAAAAAjAAkABAAAAAAAAAAkAAkABAAAAAAAAAAlAAkABAAAAAAAAAAjAAYAAwAAAAAAAAAkAAYAAwAAAAAAAAAlAAUAAwAAAAAAAAAmAAUAAwAAAAAAAAAOAAMAAwAAAAAAAAAPAAMAAwAAAAAAAAAQAAMAAwAAAAAAAAAhAAYAAwAAAAAAAAAiAAYAAwAAAAAAAAAHAAYABAAAAAEAAAAIAAYABAAAAAEAAAAJAAYABAAAAAEAAAAKAAYABAAAAAEAAAALAAYABAAAAAEAAAAMAAYABAAAAAEAAAAOAAcABAAAAAEAAAAPAAcABAAAAAEAAAAQAAcABAAAAAEAAAARAAcABAAAAAEAAAASAAcABAAAAAEAAAATAAcABAAAAAEAAAAUAAcABAAAAAEAAAAVAAcABAAAAAEAAAAlAAoABAAAAAEAAAAkAAoABAAAAAEAAAAjAAoABAAAAAEAAAAiAAoABAAAAAEAAAAhAAoABAAAAAEAAAAgAAoABAAAAAEAAAAfAAoABAAAAAEAAAAeAAoABAAAAAEAAAA=")
+tile_set = SubResource("TileSet_7mycd")
+
 [node name="Player" type="CharacterBody2D" parent="." unique_id=937831323]
+z_index = 5
 position = Vector2(-76, 155)
 script = ExtResource("1_h2yge")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1553344277]
-position = Vector2(392, -7)
-scale = Vector2(0.649, 0.642)
+position = Vector2(898, 253)
+scale = Vector2(0.4, 0.4)
 texture = ExtResource("2_1bvp3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=89628872]
-position = Vector2(383.5, -16.5)
+position = Vector2(900.5, 270)
 shape = SubResource("RectangleShape2D_1bvp3")
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=222407948]
-position = Vector2(382, -6)
+position = Vector2(760, 179)
 
-[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=658008403]
-position = Vector2(-502, 3)
-scale = Vector2(3, 3)
-tile_map_data = PackedByteArray("AAADAAgAAAAGAAYAAAAEAAgAAAAGAAYAAAAFAAgAAAAGAAYAAAAGAAgAAAAGAAYAAAAGAAcAAAAGAAYAAAAHAAcAAAAGAAYAAAAHAAYAAAAGAAYAAAAIAAYAAAAGAAYAAAAIAAUAAAAGAAYAAAAJAAUAAAAGAAYAAAALAAQAAAAGAAYAAAAMAAMAAAAGAAYAAAAMAAQAAAAGAAYAAAALAAYAAAAGAAYAAAAMAAYAAAAGAAYAAAANAAYAAAAGAAYAAAANAAcAAAAGAAYAAAAOAAcAAAAGAAYAAAAPAAcAAAAGAAYAAAAQAAcAAAAGAAYAAAAQAAQAAAAGAAYAAAARAAQAAAAGAAYAAAASAAQAAAAGAAYAAAATAAQAAAAGAAYAAAARAAgAAAAFAAQAAAASAAgAAAAFAAQAAAATAAgAAAAFAAQAAAAWAAkAAAAFAAQAAAAXAAkAAAAFAAQAAAAYAAkAAAAFAAQAAAAZAAkAAAAFAAQAAAAaAAkAAAAFAAQAAAAZAAcAAAAFAAQAAAAaAAcAAAAFAAQAAAAbAAYAAAAFAAQAAAAcAAYAAAAFAAQAAAAcAAUAAAAFAAQAAAAcAAoAAAAFAAQAAAAdAAoAAAAFAAQAAAAdAAUAAAAFAAQAAAAeAAQAAAAFAAQAAAAfAAQAAAAFAAQAAAAeAAUAAAAFAAQAAAAgAAQAAAAFAAQAAAAhAAQAAAAFAAQAAAAiAAQAAAAFAAQAAAAjAAQAAAAFAAQAAAA=")
-tile_set = SubResource("TileSet_7mycd")
+[node name="Heart" parent="." unique_id=1923355952 instance=ExtResource("8_5vw27")]
+position = Vector2(1684, 388)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Heart" unique_id=1715291270]
+libraries/ = SubResource("AnimationLibrary_4c57u")
+autoplay = &"hover-jump"
