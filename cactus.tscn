@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bwva4c1tg0425"]
 
+[ext_resource type="Script" uid="uid://cgtyygcape41t" path="res://cactus.gd" id="1_l2xdd"]
 [ext_resource type="Texture2D" uid="uid://vl34s3wcujra" path="res://extra/cactus-Sheet.png" id="1_v3bmc"]
 [ext_resource type="PackedScene" uid="uid://fg6k85kg5qyx" path="res://area_2d.tscn" id="2_l2xdd"]
 
@@ -64,8 +65,10 @@ animations = [{
 size = Vector2(95, 102)
 
 [node name="Cactus" type="Node2D" unique_id=1438457270]
+script = ExtResource("1_l2xdd")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1377691942]
+position = Vector2(1, 0)
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_deti8")
 autoplay = "default"
@@ -73,7 +76,17 @@ frame = 2
 frame_progress = 0.9978952
 
 [node name="Death" parent="." unique_id=1997320905 instance=ExtResource("2_l2xdd")]
+position = Vector2(-5, -4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death" unique_id=253804945]
+visible = false
 position = Vector2(-8.5, 5)
 shape = SubResource("RectangleShape2D_ptukp")
+
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=1565066666]
+position = Vector2(-5, -8)
+target_position = Vector2(33, 0)
+
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=1196263807]
+position = Vector2(-9, -8)
+target_position = Vector2(-30, 0)

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://d4gcx6eixxv88" path="res://area_2d.gd" id="1_gf172"]
 
 [node name="Death" type="Area2D" unique_id=1997320905]
+position = Vector2(486, 315)
 collision_mask = 2
 script = ExtResource("1_gf172")
 
