@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://bwva4c1tg0425"]
+
+[ext_resource type="Texture2D" uid="uid://vl34s3wcujra" path="res://extra/cactus-Sheet.png" id="1_v3bmc"]
+[ext_resource type="PackedScene" uid="uid://fg6k85kg5qyx" path="res://area_2d.tscn" id="2_l2xdd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pveng"]
+atlas = ExtResource("1_v3bmc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jqi05"]
+atlas = ExtResource("1_v3bmc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2a4ad"]
+atlas = ExtResource("1_v3bmc")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6gee"]
+atlas = ExtResource("1_v3bmc")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lakah"]
+atlas = ExtResource("1_v3bmc")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28ui1"]
+atlas = ExtResource("1_v3bmc")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_up74a"]
+atlas = ExtResource("1_v3bmc")
+region = Rect2(192, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_deti8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pveng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jqi05")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2a4ad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6gee")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lakah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28ui1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_up74a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ptukp"]
+size = Vector2(95, 102)
+
+[node name="Cactus" type="Node2D" unique_id=1438457270]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1377691942]
+scale = Vector2(4, 4)
+sprite_frames = SubResource("SpriteFrames_deti8")
+autoplay = "default"
+frame = 2
+frame_progress = 0.9978952
+
+[node name="Death" parent="." unique_id=1997320905 instance=ExtResource("2_l2xdd")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Death" unique_id=253804945]
+position = Vector2(-8.5, 5)
+shape = SubResource("RectangleShape2D_ptukp")
