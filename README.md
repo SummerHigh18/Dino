@@ -5,4 +5,4 @@ As all simple platformer games, it has basic movements, enemies, collectibles an
 
 Status: Level 1 completed [working on other levels and an infinite version]
 
-You can play it here!
+You can play it [here!](https://summerhigh18.itch.io/dino)
