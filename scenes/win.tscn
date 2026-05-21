@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://do2b3xdvt7bg"]
+
+[ext_resource type="Script" uid="uid://brxvmh7i5ylfl" path="res://scenes/win.gd" id="1_iiocm"]
+[ext_resource type="Texture2D" uid="uid://raqft5bdbbr0" path="res://assets/Screenshot From 2026-05-21 15-39-17.png" id="2_yxbqr"]
+[ext_resource type="FontFile" uid="uid://ci580twsdm8hj" path="res://assets/Tiny5-Regular.ttf" id="3_tylv2"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5vxan"]
+texture = ExtResource("2_yxbqr")
+modulate_color = Color(0.4274922, 0.42749354, 0.42749223, 0.95686275)
+
+[node name="Win" type="Control" unique_id=51563054]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_iiocm")
+
+[node name="Panel" type="Panel" parent="." unique_id=106374047]
+modulate = Color(0.46666667, 0.6313726, 0.6156863, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_5vxan")
+
+[node name="Replay" type="Button" parent="." unique_id=1658476875]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -433.0
+offset_top = 438.0
+offset_right = -178.0
+offset_bottom = 533.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_tylv2")
+theme_override_font_sizes/font_size = 48
+text = "Replay!"
+
+[node name="Quit" type="Button" parent="." unique_id=2012633370]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 163.0
+offset_top = 438.0
+offset_right = 418.0
+offset_bottom = 533.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_tylv2")
+theme_override_font_sizes/font_size = 48
+text = "Quit"
+
+[node name="Label" type="Label" parent="." unique_id=2065528815]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -354.0
+offset_top = -96.0
+offset_right = 355.0
+offset_bottom = -14.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 56
+text = "More Levels Coming Soon!"
+
+[node name="winning" type="Label" parent="." unique_id=190211118]
+layout_mode = 0
+offset_left = 414.0
+offset_top = 101.0
+offset_right = 749.0
+offset_bottom = 194.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = 4
+theme_override_fonts/font = ExtResource("3_tylv2")
+theme_override_font_sizes/font_size = 82
+text = " You Won!"
+
+[connection signal="button_down" from="Replay" to="." method="_on_replay_button_down"]
+[connection signal="button_down" from="Replay" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Quit" to="." method="_on_quit_button_down"]
+[connection signal="button_down" from="Quit" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="Quit" to="." method="_on_button_button_down"]

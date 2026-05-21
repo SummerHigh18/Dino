@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bok76dbww4tj2"]
 
+[ext_resource type="Script" uid="uid://jno7h3oop307" path="res://scenes/flag.gd" id="1_32e5v"]
 [ext_resource type="Texture2D" uid="uid://bnd85pawpaasd" path="res://assets/flag animation.png" id="1_76ss4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_32e5v"]
@@ -49,12 +50,21 @@ animations = [{
 size = Vector2(28, 49)
 
 [node name="Flag" type="Area2D" unique_id=792299327]
+scale = Vector2(3, 3)
+collision_mask = 2
+script = ExtResource("1_32e5v")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=801260305]
 sprite_frames = SubResource("SpriteFrames_msxbw")
 autoplay = "default"
-frame_progress = 0.24577656
+frame_progress = 0.68727547
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=885719141]
 position = Vector2(-10, 3.5)
 shape = SubResource("RectangleShape2D_rjvi2")
+
+[node name="Timer" type="Timer" parent="." unique_id=396523339]
+wait_time = 0.4
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

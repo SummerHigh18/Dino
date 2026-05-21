@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bwva4c1tg0425" path="res://scenes/cactus.tscn" id="12_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://cpsebg2lxc8ax" path="res://scenes/coin.tscn" id="13_trceg"]
 [ext_resource type="PackedScene" uid="uid://btdgxqb508mmn" path="res://scenes/platform.tscn" id="14_a8y0u"]
+[ext_resource type="PackedScene" uid="uid://bok76dbww4tj2" path="res://scenes/flag.tscn" id="15_muem4"]
 [ext_resource type="FontFile" uid="uid://c0e6igqnu3xat" path="res://assets/PixelOperator8.ttf" id="16_jbj1t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lquwl"]
@@ -778,6 +779,43 @@ _data = {
 &"move": SubResource("Animation_jkv2x")
 }
 
+[sub_resource type="Animation" id="Animation_jbj1t"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3020, 872)]
+}
+
+[sub_resource type="Animation" id="Animation_muem4"]
+resource_name = "up_move"
+loop_mode = 2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(3020, 872), Vector2(3020, 368.0001)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dp3eg"]
+_data = {
+&"RESET": SubResource("Animation_jbj1t"),
+&"up_move": SubResource("Animation_muem4")
+}
+
 [node name="Node" type="Node" unique_id=991052952]
 
 [node name="Tilesets" type="Node" parent="." unique_id=1599437424]
@@ -786,7 +824,7 @@ _data = {
 texture_filter = 1
 position = Vector2(133.00003, 130.00002)
 scale = Vector2(4.5, 4.5)
-tile_map_data = PackedByteArray("AAAHAAUABAAAAAAAAAAIAAUABAAAAAAAAAAJAAUABAAAAAAAAAAKAAUABAAAAAAAAAALAAUABAAAAAAAAAAMAAUABAAAAAAAAAARAAMAAwAAAAAAAAAUAAQAAwAAAAAAAAAVAAQAAwAAAAAAAAAXAAgAAwAAAAAAAAAYAAgAAwAAAAAAAAAZAAkAAwAAAAAAAAAaAAkAAwAAAAAAAAAbAAoAAwAAAAAAAAAcAAoAAwAAAAAAAAAOAAMAAwAAAAAAAAAPAAMAAwAAAAAAAAAQAAMAAwAAAAAAAAAHAAYABAAAAAEAAAAIAAYABAAAAAEAAAAJAAYABAAAAAEAAAAKAAYABAAAAAEAAAALAAYABAAAAAEAAAAMAAYABAAAAAEAAAAPAAcABAAAAAAAAAAQAAcABAAAAAAAAAARAAcABAAAAAAAAAASAAcABAAAAAAAAAATAAcABAAAAAAAAAAUAAcABAAAAAAAAAAVAAcABAAAAAAAAAAPAAgABAAAAAEAAAAQAAgABAAAAAEAAAARAAgABAAAAAEAAAASAAgABAAAAAEAAAATAAgABAAAAAEAAAAUAAgABAAAAAEAAAAVAAgABAAAAAEAAAANAAYAAwAAAAAAAAAOAAYAAwAAAAAAAAAVAAYAAwAAAAAAAAAtAAoABAAAAAAAAAAtAAsABAAAAAEAAAAuAAoABAAAAAAAAAAuAAsABAAAAAEAAAAnAAoABAAAAAAAAAAnAAsABAAAAAEAAAAoAAoABAAAAAAAAAAoAAsABAAAAAEAAAApAAoABAAAAAAAAAApAAsABAAAAAEAAAAqAAcAAwAAAAAAAAAqAAoABAAAAAAAAAAqAAsABAAAAAEAAAArAAcAAwAAAAAAAAArAAoABAAAAAAAAAArAAsABAAAAAEAAAAsAAcAAwAAAAAAAAAsAAoABAAAAAAAAAAsAAsABAAAAAEAAAAtAAcAAwAAAAAAAAAuAAYAAwAAAAAAAAAvAAYAAwAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAHAAUABAAAAAAAAAAIAAUABAAAAAAAAAAJAAUABAAAAAAAAAAKAAUABAAAAAAAAAALAAUABAAAAAAAAAAMAAUABAAAAAAAAAARAAMAAwAAAAAAAAAUAAQAAwAAAAAAAAAVAAQAAwAAAAAAAAAXAAgAAwAAAAAAAAAYAAgAAwAAAAAAAAAZAAkAAwAAAAAAAAAaAAkAAwAAAAAAAAAbAAoAAwAAAAAAAAAcAAoAAwAAAAAAAAAOAAMAAwAAAAAAAAAPAAMAAwAAAAAAAAAQAAMAAwAAAAAAAAAHAAYABAAAAAEAAAAIAAYABAAAAAEAAAAJAAYABAAAAAEAAAAKAAYABAAAAAEAAAALAAYABAAAAAEAAAAMAAYABAAAAAEAAAAPAAcABAAAAAAAAAAQAAcABAAAAAAAAAARAAcABAAAAAAAAAASAAcABAAAAAAAAAATAAcABAAAAAAAAAAUAAcABAAAAAAAAAAVAAcABAAAAAAAAAAPAAgABAAAAAEAAAAQAAgABAAAAAEAAAARAAgABAAAAAEAAAASAAgABAAAAAEAAAATAAgABAAAAAEAAAAUAAgABAAAAAEAAAAVAAgABAAAAAEAAAANAAYAAwAAAAAAAAAOAAYAAwAAAAAAAAAVAAYAAwAAAAAAAAAqAAMABAAAAAAAAAAqAAQABAAAAAEAAAArAAMABAAAAAAAAAArAAQABAAAAAEAAAAsAAMABAAAAAAAAAAsAAQABAAAAAEAAAAtAAAAAwAAAAAAAAAtAAMABAAAAAAAAAAtAAQABAAAAAEAAAAuAAMABAAAAAAAAAAuAAQABAAAAAEAAAAuAAAAAwAAAAAAAAAvAAAAAwAAAAAAAAAvAAMABAAAAAAAAAAvAAQABAAAAAEAAAAwAAAAAwAAAAAAAAAwAAMABAAAAAAAAAAwAAQABAAAAAEAAAAxAP//AwAAAAAAAAAxAAMABAAAAAAAAAAxAAQABAAAAAEAAAAyAP//AwAAAAAAAAA=")
 tile_set = SubResource("TileSet_7mycd")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="Tilesets" unique_id=1060539867]
@@ -849,10 +887,13 @@ position = Vector2(1248, 317)
 position = Vector2(931, 192)
 
 [node name="Coin3" parent="Coins" unique_id=1047811178 instance=ExtResource("13_trceg")]
-position = Vector2(3193.0002, 606)
+position = Vector2(3402.0002, 97)
 
 [node name="Coin4" parent="Coins" unique_id=65235979 instance=ExtResource("13_trceg")]
 position = Vector2(2530, 764)
+
+[node name="Flag" parent="Coins" unique_id=792299327 instance=ExtResource("15_muem4")]
+position = Vector2(3832.0002, -33)
 
 [node name="Platform" type="Node" parent="." unique_id=426987086]
 
@@ -866,9 +907,17 @@ position = Vector2(2291.0002, 872.00006)
 libraries/ = SubResource("AnimationLibrary_jbj1t")
 autoplay = &"move"
 
+[node name="Platform3" parent="Platform" unique_id=2115418872 instance=ExtResource("14_a8y0u")]
+position = Vector2(3020, 872)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Platform/Platform3" unique_id=1578394713]
+libraries/ = SubResource("AnimationLibrary_dp3eg")
+autoplay = &"up_move"
+
 [node name="Texts" type="Node" parent="." unique_id=1095992276]
 
 [node name="Label" type="Label" parent="Texts" unique_id=576950807]
+visible = false
 offset_left = 265.0
 offset_top = 399.0
 offset_right = 615.0
@@ -878,6 +927,7 @@ theme_override_font_sizes/font_size = 80
 text = "Jump!"
 
 [node name="Label2" type="Label" parent="Texts" unique_id=886151220]
+visible = false
 z_index = -1
 offset_left = 1351.0
 offset_top = 441.0

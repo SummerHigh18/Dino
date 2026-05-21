@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://de0u4yd5o137y"]
+
+[ext_resource type="Script" uid="uid://daohb6785pmue" path="res://scenes/levels.gd" id="1_5ekxl"]
+[ext_resource type="FontFile" uid="uid://ci580twsdm8hj" path="res://assets/Tiny5-Regular.ttf" id="1_hcnff"]
+[ext_resource type="Texture2D" uid="uid://pesuk0qwmajl" path="res://assets/Screenshot From 2026-05-21 14-56-16.png" id="2_hk6qi"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5ekxl"]
+texture = ExtResource("2_hk6qi")
+modulate_color = Color(0.4274922, 0.42749354, 0.42749223, 0.95686275)
+
+[node name="Levels" type="Control" unique_id=51563054]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5ekxl")
+
+[node name="Panel" type="Panel" parent="." unique_id=106374047]
+modulate = Color(0.46666667, 0.6313726, 0.6156863, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_5ekxl")
+
+[node name="Button" type="Button" parent="." unique_id=1658476875]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -127.5
+offset_top = 167.0
+offset_right = 127.5
+offset_bottom = 262.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_hcnff")
+theme_override_font_sizes/font_size = 48
+text = "Level 1"
+
+[node name="Label" type="Label" parent="." unique_id=2065528815]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -354.5
+offset_top = -231.0
+offset_right = 354.5
+offset_bottom = -149.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_font_sizes/font_size = 56
+text = "More Levels Coming Soon!"
+
+[connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
