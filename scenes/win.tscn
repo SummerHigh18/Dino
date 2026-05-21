@@ -87,6 +87,6 @@ text = " You Won!"
 
 [connection signal="button_down" from="Replay" to="." method="_on_replay_button_down"]
 [connection signal="button_down" from="Replay" to="." method="_on_button_button_down"]
-[connection signal="button_down" from="Quit" to="." method="_on_quit_button_down"]
-[connection signal="button_down" from="Quit" to="." method="_on_button_2_button_down"]
 [connection signal="button_down" from="Quit" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Quit" to="." method="_on_button_2_button_down"]
+[connection signal="button_down" from="Quit" to="." method="_on_quit_button_down"]

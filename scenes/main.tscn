@@ -917,7 +917,6 @@ autoplay = &"up_move"
 [node name="Texts" type="Node" parent="." unique_id=1095992276]
 
 [node name="Label" type="Label" parent="Texts" unique_id=576950807]
-visible = false
 offset_left = 265.0
 offset_top = 399.0
 offset_right = 615.0
@@ -927,7 +926,6 @@ theme_override_font_sizes/font_size = 80
 text = "Jump!"
 
 [node name="Label2" type="Label" parent="Texts" unique_id=886151220]
-visible = false
 z_index = -1
 offset_left = 1351.0
 offset_top = 441.0
