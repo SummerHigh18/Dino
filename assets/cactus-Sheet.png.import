@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dbok3y42jtxu6"
-path="res://.godot/imported/Solid_white.png-8bebff8e69271ba71323e9092091d991.ctex"
+uid="uid://vl34s3wcujra"
+path="res://.godot/imported/cactus-Sheet.png-83c006f67e9913aadac53264eedb6890.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://extra/Solid_white.png"
-dest_files=["res://.godot/imported/Solid_white.png-8bebff8e69271ba71323e9092091d991.ctex"]
+source_file="res://assets/cactus-Sheet.png"
+dest_files=["res://.godot/imported/cactus-Sheet.png-83c006f67e9913aadac53264eedb6890.ctex"]
 
 [params]
 

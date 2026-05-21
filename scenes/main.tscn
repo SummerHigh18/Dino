@@ -1,19 +1,20 @@
 [gd_scene format=4 uid="uid://cqow47bch5ocs"]
 
-[ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://player.gd" id="1_h2yge"]
-[ext_resource type="Texture2D" uid="uid://c5b8pdrs11q00" path="res://extra/finaldino.png" id="2_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://dbok3y42jtxu6" path="res://extra/Solid_white.png" id="2_h2yge"]
-[ext_resource type="Texture2D" uid="uid://bej048uiesd7p" path="res://extra/Sprite-0003.png" id="4_1bvp3"]
-[ext_resource type="Texture2D" uid="uid://u16lx2roa6im" path="res://extra/Sprite-0009.png" id="5_7mycd"]
-[ext_resource type="Texture2D" uid="uid://d20fclao2bb7w" path="res://extra/Sprite-ground.png" id="6_272bh"]
-[ext_resource type="Texture2D" uid="uid://bb8xdn1psqu6d" path="res://extra.png" id="7_272bh"]
-[ext_resource type="PackedScene" uid="uid://blit1jcatfu1q" path="res://heart.tscn" id="8_5vw27"]
-[ext_resource type="Texture2D" uid="uid://csrk52pwbypjj" path="res://extra/finaldino-Sheet-export.png" id="8_kek77"]
-[ext_resource type="PackedScene" uid="uid://fg6k85kg5qyx" path="res://area_2d.tscn" id="10_4c57u"]
-[ext_resource type="PackedScene" uid="uid://bwva4c1tg0425" path="res://cactus.tscn" id="11_efxa6"]
+[ext_resource type="Texture2D" uid="uid://dbok3y42jtxu6" path="res://assets/Solid_white.png" id="1_eb6dy"]
+[ext_resource type="Texture2D" uid="uid://bej048uiesd7p" path="res://assets/Sprite-0003.png" id="2_trceg"]
+[ext_resource type="Texture2D" uid="uid://u16lx2roa6im" path="res://assets/Sprite-0009.png" id="3_a8y0u"]
+[ext_resource type="Texture2D" uid="uid://d20fclao2bb7w" path="res://assets/Sprite-ground.png" id="4_jkv2x"]
+[ext_resource type="Texture2D" uid="uid://bb8xdn1psqu6d" path="res://assets/extra.png" id="5_jbj1t"]
+[ext_resource type="Texture2D" uid="uid://dth0n0gyiqyu" path="res://assets/platformm.png" id="6_muem4"]
+[ext_resource type="Script" uid="uid://80kl10p8d3vr" path="res://scripts/player.gd" id="7_dp3eg"]
+[ext_resource type="Texture2D" uid="uid://c5b8pdrs11q00" path="res://assets/finaldino.png" id="8_0ld40"]
+[ext_resource type="Texture2D" uid="uid://csrk52pwbypjj" path="res://assets/finaldino-Sheet-export.png" id="9_gqmmt"]
+[ext_resource type="PackedScene" uid="uid://blit1jcatfu1q" path="res://scenes/heart.tscn" id="10_yc10j"]
+[ext_resource type="PackedScene" uid="uid://fg6k85kg5qyx" path="res://scenes/area_2d.tscn" id="11_jscy8"]
+[ext_resource type="PackedScene" uid="uid://bwva4c1tg0425" path="res://scenes/cactus.tscn" id="12_pm3ni"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lquwl"]
-texture = ExtResource("2_h2yge")
+texture = ExtResource("1_eb6dy")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
@@ -304,7 +305,7 @@ texture = ExtResource("2_h2yge")
 11:11/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7mycd"]
-texture = ExtResource("4_1bvp3")
+texture = ExtResource("2_trceg")
 0:5/0 = 0
 0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -5.036044, 8, -5.0102377, 8, 8, -8, 8)
 1:5/0 = 0
@@ -327,7 +328,7 @@ texture = ExtResource("4_1bvp3")
 7:6/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5vw27"]
-texture = ExtResource("5_7mycd")
+texture = ExtResource("3_a8y0u")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(1.2590103, 0.71943474, 8, 0.71943474, 8, 8, 0.35971832, 8)
 1:0/0 = 0
@@ -338,16 +339,23 @@ texture = ExtResource("5_7mycd")
 1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 1.7985878, -8, 0.35971832, 0.35971832, -8, 1.6187286)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kek77"]
-texture = ExtResource("6_272bh")
+texture = ExtResource("4_jkv2x")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4c57u"]
-texture = ExtResource("7_272bh")
+texture = ExtResource("5_jbj1t")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0 = 0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ycdy4"]
+texture = ExtResource("6_muem4")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.2996063, 4.9138365, -3.5625315, 5.159528, 2.9483023, -8, 3.071148)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -4.2996063, 4.9138365, -3.5625315, 5.159528, 2.9483023, -8, 3.071148)
 
 [sub_resource type="TileSet" id="TileSet_7mycd"]
 physics_layer_0/collision_layer = 1
@@ -356,32 +364,33 @@ sources/1 = SubResource("TileSetAtlasSource_7mycd")
 sources/2 = SubResource("TileSetAtlasSource_5vw27")
 sources/3 = SubResource("TileSetAtlasSource_kek77")
 sources/4 = SubResource("TileSetAtlasSource_4c57u")
+sources/5 = SubResource("TileSetAtlasSource_ycdy4")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(69.375, 63)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4c57u"]
-atlas = ExtResource("8_kek77")
+atlas = ExtResource("9_gqmmt")
 region = Rect2(0, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_efxa6"]
-atlas = ExtResource("8_kek77")
+atlas = ExtResource("9_gqmmt")
 region = Rect2(256, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dg77c"]
-atlas = ExtResource("8_kek77")
+atlas = ExtResource("9_gqmmt")
 region = Rect2(512, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ycdy4"]
-atlas = ExtResource("8_kek77")
+atlas = ExtResource("9_gqmmt")
 region = Rect2(768, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w48qg"]
-atlas = ExtResource("8_kek77")
+atlas = ExtResource("9_gqmmt")
 region = Rect2(1024, 0, 256, 256)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vivmo"]
-atlas = ExtResource("8_kek77")
+atlas = ExtResource("9_gqmmt")
 region = Rect2(1280, 0, 256, 256)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_2cqfq"]
@@ -457,20 +466,20 @@ distance = -7.0
 texture_filter = 1
 position = Vector2(133.00003, 130.00002)
 scale = Vector2(4.5, 4.5)
-tile_map_data = PackedByteArray("AAAHAAUABAAAAAAAAAAIAAUABAAAAAAAAAAJAAUABAAAAAAAAAAKAAUABAAAAAAAAAALAAUABAAAAAAAAAAMAAUABAAAAAAAAAARAAMAAwAAAAAAAAAUAAQAAwAAAAAAAAAVAAQAAwAAAAAAAAAXAAgAAwAAAAAAAAAYAAgAAwAAAAAAAAAZAAkAAwAAAAAAAAAaAAkAAwAAAAAAAAAbAAoAAwAAAAAAAAAcAAoAAwAAAAAAAAAeAAkABAAAAAAAAAAfAAkABAAAAAAAAAAgAAkABAAAAAAAAAAhAAkABAAAAAAAAAAiAAkABAAAAAAAAAAjAAkABAAAAAAAAAAkAAkABAAAAAAAAAAlAAkABAAAAAAAAAAjAAYAAwAAAAAAAAAkAAYAAwAAAAAAAAAlAAUAAwAAAAAAAAAmAAUAAwAAAAAAAAAOAAMAAwAAAAAAAAAPAAMAAwAAAAAAAAAQAAMAAwAAAAAAAAAhAAYAAwAAAAAAAAAiAAYAAwAAAAAAAAAHAAYABAAAAAEAAAAIAAYABAAAAAEAAAAJAAYABAAAAAEAAAAKAAYABAAAAAEAAAALAAYABAAAAAEAAAAMAAYABAAAAAEAAAAlAAoABAAAAAEAAAAkAAoABAAAAAEAAAAjAAoABAAAAAEAAAAiAAoABAAAAAEAAAAhAAoABAAAAAEAAAAgAAoABAAAAAEAAAAfAAoABAAAAAEAAAAeAAoABAAAAAEAAAAPAAcABAAAAAAAAAAQAAcABAAAAAAAAAARAAcABAAAAAAAAAASAAcABAAAAAAAAAATAAcABAAAAAAAAAAUAAcABAAAAAAAAAAVAAcABAAAAAAAAAAPAAgABAAAAAEAAAAQAAgABAAAAAEAAAARAAgABAAAAAEAAAASAAgABAAAAAEAAAATAAgABAAAAAEAAAAUAAgABAAAAAEAAAAVAAgABAAAAAEAAAANAAYAAwAAAAAAAAAOAAYAAwAAAAAAAAAVAAYAAwAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAHAAUABAAAAAAAAAAIAAUABAAAAAAAAAAJAAUABAAAAAAAAAAKAAUABAAAAAAAAAALAAUABAAAAAAAAAAMAAUABAAAAAAAAAARAAMAAwAAAAAAAAAUAAQAAwAAAAAAAAAVAAQAAwAAAAAAAAAXAAgAAwAAAAAAAAAYAAgAAwAAAAAAAAAZAAkAAwAAAAAAAAAaAAkAAwAAAAAAAAAbAAoAAwAAAAAAAAAcAAoAAwAAAAAAAAAeAAkABAAAAAAAAAAfAAkABAAAAAAAAAAgAAkABAAAAAAAAAAhAAkABAAAAAAAAAAiAAkABAAAAAAAAAAjAAkABAAAAAAAAAAkAAkABAAAAAAAAAAlAAkABAAAAAAAAAAjAAYAAwAAAAAAAAAkAAYAAwAAAAAAAAAlAAUAAwAAAAAAAAAmAAUAAwAAAAAAAAAOAAMAAwAAAAAAAAAPAAMAAwAAAAAAAAAQAAMAAwAAAAAAAAAhAAYAAwAAAAAAAAAiAAYAAwAAAAAAAAAHAAYABAAAAAEAAAAIAAYABAAAAAEAAAAJAAYABAAAAAEAAAAKAAYABAAAAAEAAAALAAYABAAAAAEAAAAMAAYABAAAAAEAAAAlAAoABAAAAAEAAAAkAAoABAAAAAEAAAAjAAoABAAAAAEAAAAiAAoABAAAAAEAAAAhAAoABAAAAAEAAAAgAAoABAAAAAEAAAAfAAoABAAAAAEAAAAeAAoABAAAAAEAAAAPAAcABAAAAAAAAAAQAAcABAAAAAAAAAARAAcABAAAAAAAAAASAAcABAAAAAAAAAATAAcABAAAAAAAAAAUAAcABAAAAAAAAAAVAAcABAAAAAAAAAAPAAgABAAAAAEAAAAQAAgABAAAAAEAAAARAAgABAAAAAEAAAASAAgABAAAAAEAAAATAAgABAAAAAEAAAAUAAgABAAAAAEAAAAVAAgABAAAAAEAAAANAAYAAwAAAAAAAAAOAAYAAwAAAAAAAAAVAAYAAwAAAAAAAAAKAAEABQAAAAAAAAALAAEABQABAAAAAAA=")
 tile_set = SubResource("TileSet_7mycd")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=937831323]
 z_index = 5
 position = Vector2(-76, 155)
 collision_layer = 2
-script = ExtResource("1_h2yge")
+script = ExtResource("7_dp3eg")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1553344277]
 visible = false
 position = Vector2(727, 238)
 scale = Vector2(0.4, 0.4)
-texture = ExtResource("2_1bvp3")
+texture = ExtResource("8_0ld40")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=89628872]
 position = Vector2(971.3125, 225.5)
@@ -484,27 +493,22 @@ limit_bottom = 1100
 position = Vector2(971.00006, 220)
 scale = Vector2(0.47, 0.47)
 sprite_frames = SubResource("SpriteFrames_2cqfq")
+autoplay = "default"
 frame_progress = 0.5099842
 
-[node name="Heart" parent="." unique_id=1191912140 instance=ExtResource("8_5vw27")]
+[node name="Heart" parent="." unique_id=1191912140 instance=ExtResource("10_yc10j")]
 position = Vector2(1684, 388)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Heart" unique_id=1715291270]
 libraries/ = SubResource("AnimationLibrary_4c57u")
 autoplay = &"hover-jump"
 
-[node name="Heart" parent="Heart" unique_id=1923355952 instance=ExtResource("8_5vw27")]
-position = Vector2(-298, -77)
-
-[node name="Heart2" parent="Heart" unique_id=1556455465 instance=ExtResource("8_5vw27")]
-position = Vector2(861, 140)
-
-[node name="Area2D" parent="." unique_id=1997320905 instance=ExtResource("10_4c57u")]
+[node name="Area2D" parent="." unique_id=1997320905 instance=ExtResource("11_jscy8")]
 position = Vector2(1347, 1143)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=665912752]
 position = Vector2(1, -2)
 shape = SubResource("WorldBoundaryShape2D_efxa6")
 
-[node name="Cactus" parent="." unique_id=1438457270 instance=ExtResource("11_efxa6")]
+[node name="Cactus" parent="." unique_id=1438457270 instance=ExtResource("12_pm3ni")]
 position = Vector2(1543, 571)

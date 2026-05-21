@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bwva4c1tg0425"]
 
-[ext_resource type="Script" uid="uid://cgtyygcape41t" path="res://cactus.gd" id="1_l2xdd"]
-[ext_resource type="Texture2D" uid="uid://vl34s3wcujra" path="res://extra/cactus-Sheet.png" id="1_v3bmc"]
-[ext_resource type="PackedScene" uid="uid://fg6k85kg5qyx" path="res://area_2d.tscn" id="2_l2xdd"]
+[ext_resource type="Script" uid="uid://cgtyygcape41t" path="res://scripts/cactus.gd" id="1_l2xdd"]
+[ext_resource type="Texture2D" uid="uid://vl34s3wcujra" path="res://assets/cactus-Sheet.png" id="1_v3bmc"]
+[ext_resource type="PackedScene" uid="uid://fg6k85kg5qyx" path="res://scenes/area_2d.tscn" id="2_l2xdd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pveng"]
 atlas = ExtResource("1_v3bmc")
