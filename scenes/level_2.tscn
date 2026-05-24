@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://c5b8pdrs11q00" path="res://assets/finaldino.png" id="12_guvtl"]
 [ext_resource type="Texture2D" uid="uid://csrk52pwbypjj" path="res://assets/finaldino-Sheet-export.png" id="13_igmy8"]
 [ext_resource type="PackedScene" uid="uid://cpsebg2lxc8ax" path="res://scenes/coin.tscn" id="14_fldb1"]
+[ext_resource type="PackedScene" uid="uid://ctg6235d7nruf" path="res://scenes/fruit.tscn" id="15_guvtl"]
+[ext_resource type="PackedScene" uid="uid://h4akvl1yd21" path="res://scenes/fruit_2.tscn" id="16_igmy8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fldb1"]
 texture = ExtResource("1_y0kc7")
@@ -379,6 +381,7 @@ texture = ExtResource("7_g2hoc")
 5:0/0 = 0
 5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 7:0/0 = 0
 7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 8:0/0 = 0
@@ -767,7 +770,7 @@ position = Vector2(733, 1121)
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=358274008]
 z_index = 5
-position = Vector2(-960, -496)
+position = Vector2(2150, -1003)
 collision_layer = 2
 script = ExtResource("11_fldb1")
 
@@ -803,3 +806,30 @@ position = Vector2(959, 11)
 
 [node name="Coin4" parent="Coins" unique_id=688374946 instance=ExtResource("14_fldb1")]
 position = Vector2(1048, 11)
+
+[node name="Coin5" parent="Coins" unique_id=61132254 instance=ExtResource("14_fldb1")]
+position = Vector2(1576, 110)
+
+[node name="Coin6" parent="Coins" unique_id=1516194319 instance=ExtResource("14_fldb1")]
+position = Vector2(1974, -7)
+
+[node name="Coin7" parent="Coins" unique_id=289527996 instance=ExtResource("14_fldb1")]
+position = Vector2(2484, -67)
+
+[node name="Coin8" parent="Coins" unique_id=55650358 instance=ExtResource("14_fldb1")]
+position = Vector2(2613, -214)
+
+[node name="Coin9" parent="Coins" unique_id=124970156 instance=ExtResource("14_fldb1")]
+position = Vector2(3046, -515)
+
+[node name="Coin10" parent="Coins" unique_id=1768796616 instance=ExtResource("14_fldb1")]
+position = Vector2(3637.0002, -462.00003)
+
+[node name="Coin11" parent="Coins" unique_id=1511024187 instance=ExtResource("14_fldb1")]
+position = Vector2(3513, -460)
+
+[node name="Fruit" parent="." unique_id=217376970 instance=ExtResource("15_guvtl")]
+position = Vector2(4688, -704)
+
+[node name="Fruit-2" parent="." unique_id=1749377643 instance=ExtResource("16_igmy8")]
+position = Vector2(1031, 734)
