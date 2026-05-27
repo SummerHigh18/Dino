@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://do2b3xdvt7bg"]
 
-[ext_resource type="Script" uid="uid://brxvmh7i5ylfl" path="res://scenes/win.gd" id="1_iiocm"]
+[ext_resource type="Script" uid="uid://brxvmh7i5ylfl" path="res://scripts/win.gd" id="1_iiocm"]
 [ext_resource type="Texture2D" uid="uid://raqft5bdbbr0" path="res://assets/Screenshot From 2026-05-21 15-39-17.png" id="2_yxbqr"]
 [ext_resource type="FontFile" uid="uid://ci580twsdm8hj" path="res://assets/Tiny5-Regular.ttf" id="3_tylv2"]
 
