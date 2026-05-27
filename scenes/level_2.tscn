@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://h4akvl1yd21" path="res://scenes/fruit_2.tscn" id="16_igmy8"]
 [ext_resource type="PackedScene" uid="uid://bwva4c1tg0425" path="res://scenes/cactus.tscn" id="17_wdtqu"]
 [ext_resource type="PackedScene" uid="uid://chmknfdtrufmb" path="res://scenes/purple_slime.tscn" id="18_7qsfm"]
+[ext_resource type="PackedScene" uid="uid://c7abyerq6r074" path="res://scenes/green_slime.tscn" id="19_bv48q"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fldb1"]
 texture = ExtResource("1_y0kc7")
@@ -749,82 +750,6 @@ animations = [{
 "speed": 14.0
 }]
 
-[sub_resource type="Animation" id="Animation_bv48q"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(2904, -422)]
-}
-
-[sub_resource type="Animation" id="Animation_7qsfm"]
-resource_name = "move"
-length = 2.0
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 2),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(2904, -422), Vector2(3336, -422)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_bv48q"]
-_data = {
-&"RESET": SubResource("Animation_bv48q"),
-&"move": SubResource("Animation_7qsfm")
-}
-
-[sub_resource type="Animation" id="Animation_k22d5"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1754, 1017)]
-}
-
-[sub_resource type="Animation" id="Animation_k6a82"]
-resource_name = "move"
-length = 1.2666667
-loop_mode = 2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1.2666667),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector2(1754, 1017), Vector2(2039, 1017)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_1sb0y"]
-_data = {
-&"RESET": SubResource("Animation_k22d5"),
-&"move": SubResource("Animation_k6a82")
-}
-
 [node name="level2" type="Node" unique_id=1932088488]
 
 [node name="Tilesets" type="Node" parent="." unique_id=845311258]
@@ -918,13 +843,14 @@ position = Vector2(1193, 213)
 [node name="Purple Slime" parent="." unique_id=544657074 instance=ExtResource("18_7qsfm")]
 position = Vector2(2904, -422)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Purple Slime" unique_id=284122346]
-libraries/ = SubResource("AnimationLibrary_bv48q")
-autoplay = &"move"
+[node name="Purple Slime2" parent="." unique_id=1575048240 instance=ExtResource("18_7qsfm")]
+position = Vector2(1394, 1090)
 
-[node name="Purple Slime2" parent="." unique_id=1460066554 instance=ExtResource("18_7qsfm")]
-position = Vector2(1754, 1017)
+[node name="Purple Slime3" parent="." unique_id=33881393 instance=ExtResource("18_7qsfm")]
+position = Vector2(4276, -565)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="Purple Slime2" unique_id=1084593491]
-libraries/ = SubResource("AnimationLibrary_1sb0y")
-autoplay = &"move"
+[node name="Purple Slime4" parent="." unique_id=505084564 instance=ExtResource("18_7qsfm")]
+position = Vector2(3264, 82)
+
+[node name="Greens Slime" parent="." unique_id=2029457236 instance=ExtResource("19_bv48q")]
+position = Vector2(1323, 734)

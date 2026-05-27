@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://chmknfdtrufmb"]
 
+[ext_resource type="Script" uid="uid://wbw16cqew2w6" path="res://scenes/purple_slime.gd" id="1_p4tba"]
 [ext_resource type="Texture2D" uid="uid://b62wi63hqhso" path="res://assets/slime_purple.png" id="1_rwesy"]
 [ext_resource type="PackedScene" uid="uid://fg6k85kg5qyx" path="res://scenes/area_2d.tscn" id="2_p4tba"]
 
@@ -40,10 +41,11 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4btqv"]
-size = Vector2(10, 12)
+size = Vector2(10, 13)
 
 [node name="Purple Slime" type="Node2D" unique_id=544657074]
 scale = Vector2(4, 4)
+script = ExtResource("1_p4tba")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=737159485]
 sprite_frames = SubResource("SpriteFrames_kw5n6")
@@ -56,15 +58,17 @@ frame_progress = 0.75596
 position = Vector2(-5, -4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death" unique_id=557231891]
-position = Vector2(5, 10)
+position = Vector2(5, 9.5)
 shape = SubResource("RectangleShape2D_4btqv")
 
-[node name="RayCastRight" type="RayCast2D" parent="." unique_id=1625993702]
-visible = false
-position = Vector2(1, 5)
-target_position = Vector2(33, 0)
+[node name="RayCastRight" type="RayCast2D" parent="." unique_id=354876739]
+position = Vector2(14, 3)
+target_position = Vector2(0, 10.5)
 
-[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=243887013]
-visible = false
-position = Vector2(0, 5)
-target_position = Vector2(-30, 0)
+[node name="RayCastLeft" type="RayCast2D" parent="." unique_id=760376697]
+position = Vector2(-12.5, 3)
+target_position = Vector2(0, 10.5)
+
+[node name="RayCastRight2" type="RayCast2D" parent="." unique_id=1880012145]
+position = Vector2(1.75, 5.5)
+target_position = Vector2(6.25, 0)
