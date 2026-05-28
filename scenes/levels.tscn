@@ -41,6 +41,20 @@ theme_override_fonts/font = ExtResource("1_hcnff")
 theme_override_font_sizes/font_size = 48
 text = "Level 1"
 
+[node name="Button2" type="Button" parent="." unique_id=1860991816]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -127.5
+offset_top = 308.0
+offset_right = 127.5
+offset_bottom = 403.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_hcnff")
+theme_override_font_sizes/font_size = 48
+text = "Level 2"
+
 [node name="Label" type="Label" parent="." unique_id=2065528815]
 layout_mode = 1
 anchors_preset = 7
@@ -48,13 +62,16 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -354.5
-offset_top = -231.0
-offset_right = 354.5
-offset_bottom = -149.0
+offset_left = -307.25
+offset_top = -169.0
+offset_right = 307.25
+offset_bottom = -102.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_font_sizes/font_size = 56
+theme_override_font_sizes/font_size = 48
 text = "More Levels Coming Soon!"
+horizontal_alignment = 1
+autowrap_mode = 2
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
+[connection signal="button_down" from="Button2" to="." method="_on_button_2_button_down"]

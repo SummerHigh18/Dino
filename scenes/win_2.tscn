@@ -1,21 +1,21 @@
-[gd_scene format=3 uid="uid://do2b3xdvt7bg"]
+[gd_scene format=3 uid="uid://dkeqwts1q3ut4"]
 
-[ext_resource type="Script" uid="uid://brxvmh7i5ylfl" path="res://scripts/win.gd" id="1_iiocm"]
-[ext_resource type="Texture2D" uid="uid://raqft5bdbbr0" path="res://assets/Screenshot From 2026-05-21 15-39-17.png" id="2_yxbqr"]
-[ext_resource type="FontFile" uid="uid://ci580twsdm8hj" path="res://assets/Tiny5-Regular.ttf" id="3_tylv2"]
+[ext_resource type="Script" uid="uid://brxvmh7i5ylfl" path="res://scripts/win.gd" id="1_u1vqq"]
+[ext_resource type="Texture2D" uid="uid://raqft5bdbbr0" path="res://assets/Screenshot From 2026-05-21 15-39-17.png" id="2_apujw"]
+[ext_resource type="FontFile" uid="uid://ci580twsdm8hj" path="res://assets/Tiny5-Regular.ttf" id="3_vf4ey"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5vxan"]
-texture = ExtResource("2_yxbqr")
+texture = ExtResource("2_apujw")
 modulate_color = Color(0.4274922, 0.42749354, 0.42749223, 0.95686275)
 
-[node name="Win_1" type="Control" unique_id=51563054]
+[node name="Win_2" type="Control" unique_id=51563054]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_iiocm")
+script = ExtResource("1_u1vqq")
 
 [node name="Panel" type="Panel" parent="." unique_id=106374047]
 modulate = Color(0.46666667, 0.6313726, 0.6156863, 1)
@@ -33,27 +33,29 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -433.0
-offset_top = 438.0
+offset_top = 420.0
 offset_right = -178.0
-offset_bottom = 533.0
+offset_bottom = 536.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("3_tylv2")
+theme_override_fonts/font = ExtResource("3_vf4ey")
 theme_override_font_sizes/font_size = 48
-text = "Replay"
+text = "Previous Level
+"
+autowrap_mode = 2
 
 [node name="Next_lvl" type="Button" parent="." unique_id=1484849869]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -161.0
-offset_top = 426.0
-offset_right = 145.0
-offset_bottom = 552.0
+offset_left = -160.0
+offset_top = 408.0
+offset_right = 146.0
+offset_bottom = 540.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("3_tylv2")
+theme_override_fonts/font = ExtResource("3_vf4ey")
 theme_override_font_sizes/font_size = 48
-text = "Next Level!"
+text = "Replay!"
 
 [node name="Quit" type="Button" parent="." unique_id=2012633370]
 layout_mode = 1
@@ -61,16 +63,15 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = 163.0
-offset_top = 438.0
+offset_top = 420.0
 offset_right = 418.0
-offset_bottom = 533.0
+offset_bottom = 536.0
 grow_horizontal = 2
-theme_override_fonts/font = ExtResource("3_tylv2")
+theme_override_fonts/font = ExtResource("3_vf4ey")
 theme_override_font_sizes/font_size = 48
 text = "Quit"
 
 [node name="Label" type="Label" parent="." unique_id=2065528815]
-visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -96,7 +97,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/shadow_offset_x = 5
 theme_override_constants/shadow_offset_y = 4
-theme_override_fonts/font = ExtResource("3_tylv2")
+theme_override_fonts/font = ExtResource("3_vf4ey")
 theme_override_font_sizes/font_size = 82
 text = " You Won!"
 

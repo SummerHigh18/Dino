@@ -7,9 +7,9 @@ var fruit = 0
 func add_score():
 	score += 1
 	print(score)
-	score_label.text = "You collected" + str(score) + " coins!"
+	score_label.text = "You collected " + str(score) + " coins and " + str(fruit) + " fruits!!!"
 	
 
 func add_fruit():
 	fruit += 1
-	score_label.text = "You collected " + str(score) + " coins and " + str(fruit) + "fruits!!!"
+	score_label.text = "You collected " + str(score) + " coins and " + str(fruit) + " fruits!!!"

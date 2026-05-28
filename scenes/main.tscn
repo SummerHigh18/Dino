@@ -15,6 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://bwva4c1tg0425" path="res://scenes/cactus.tscn" id="12_pm3ni"]
 [ext_resource type="PackedScene" uid="uid://cpsebg2lxc8ax" path="res://scenes/coin.tscn" id="13_trceg"]
 [ext_resource type="PackedScene" uid="uid://btdgxqb508mmn" path="res://scenes/platform.tscn" id="14_a8y0u"]
+[ext_resource type="Script" uid="uid://b7k2lkuxgc0my" path="res://scripts/coins_two.gd" id="15_dp3eg"]
 [ext_resource type="PackedScene" uid="uid://bok76dbww4tj2" path="res://scenes/flag.tscn" id="15_muem4"]
 [ext_resource type="FontFile" uid="uid://c0e6igqnu3xat" path="res://assets/PixelOperator8.ttf" id="16_jbj1t"]
 
@@ -882,18 +883,19 @@ position = Vector2(1543, 571)
 
 [node name="Coin" parent="Coins" unique_id=914637520 instance=ExtResource("13_trceg")]
 position = Vector2(1248, 317)
+script = ExtResource("15_dp3eg")
 
 [node name="Coin2" parent="Coins" unique_id=676597938 instance=ExtResource("13_trceg")]
 position = Vector2(931, 192)
+script = ExtResource("15_dp3eg")
 
 [node name="Coin3" parent="Coins" unique_id=1047811178 instance=ExtResource("13_trceg")]
 position = Vector2(3402.0002, 97)
+script = ExtResource("15_dp3eg")
 
 [node name="Coin4" parent="Coins" unique_id=65235979 instance=ExtResource("13_trceg")]
 position = Vector2(2530, 764)
-
-[node name="Flag" parent="Coins" unique_id=792299327 instance=ExtResource("15_muem4")]
-position = Vector2(3832.0002, -33)
+script = ExtResource("15_dp3eg")
 
 [node name="Platform" type="Node" parent="." unique_id=426987086]
 
@@ -954,3 +956,6 @@ offset_bottom = 871.0
 theme_override_fonts/font = ExtResource("16_jbj1t")
 theme_override_font_sizes/font_size = 32
 text = "This was Level 1!"
+
+[node name="Flag" parent="." unique_id=792299327 instance=ExtResource("15_muem4")]
+position = Vector2(3832.0002, -33)
