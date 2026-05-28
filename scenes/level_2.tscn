@@ -22,6 +22,8 @@
 [ext_resource type="PackedScene" uid="uid://c7abyerq6r074" path="res://scenes/green_slime.tscn" id="19_bv48q"]
 [ext_resource type="PackedScene" uid="uid://fg6k85kg5qyx" path="res://scenes/area_2d.tscn" id="20_k22d5"]
 [ext_resource type="FontFile" uid="uid://c0e6igqnu3xat" path="res://assets/PixelOperator8.ttf" id="22_1sb0y"]
+[ext_resource type="Script" uid="uid://d1beq52whxn1v" path="res://scripts/game_manager.gd" id="23_vhnap"]
+[ext_resource type="FontFile" uid="uid://2vym8mjv8qf2" path="res://assets/PixelOperator8-Bold.ttf" id="24_vwfin"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fldb1"]
 texture = ExtResource("1_y0kc7")
@@ -933,7 +935,7 @@ position = Vector2(733, 1121)
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=358274008]
 z_index = 5
-position = Vector2(-1474, -462)
+position = Vector2(-675, 177)
 collision_layer = 2
 script = ExtResource("11_fldb1")
 
@@ -1046,15 +1048,6 @@ theme_override_fonts/font = ExtResource("22_1sb0y")
 theme_override_font_sizes/font_size = 80
 text = "Level 2!"
 
-[node name="Label3" type="Label" parent="Texts" unique_id=2107208436]
-offset_left = 125.0
-offset_top = 1115.0
-offset_right = 637.0
-offset_bottom = 1208.0
-theme_override_fonts/font = ExtResource("22_1sb0y")
-theme_override_font_sizes/font_size = 65
-text = "You won!!!"
-
 [node name="Platforms" type="Node" parent="." unique_id=973636305]
 
 [node name="Platforms" parent="Platforms" unique_id=260449209 instance=ExtResource("11_k6a82")]
@@ -1090,3 +1083,19 @@ position = Vector2(1534, 1474)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Death2" unique_id=39913386]
 shape = SubResource("WorldBoundaryShape2D_1sb0y")
+
+[node name="Game Manager" type="Node" parent="." unique_id=1136993662]
+unique_name_in_owner = true
+script = ExtResource("23_vhnap")
+
+[node name="Score" type="Label" parent="Game Manager" unique_id=2107208436]
+offset_left = -231.0
+offset_top = 1033.0
+offset_right = 630.0
+offset_bottom = 1252.0
+theme_override_colors/font_color = Color(0.4862745, 0, 1, 1)
+theme_override_fonts/font = ExtResource("24_vwfin")
+theme_override_font_sizes/font_size = 64
+text = "You collected 0 coins...huh"
+horizontal_alignment = 1
+autowrap_mode = 2
