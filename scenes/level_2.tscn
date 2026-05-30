@@ -937,7 +937,7 @@ tile_set = SubResource("TileSet_vhnap")
 
 [node name="Player" type="CharacterBody2D" parent="." unique_id=358274008]
 z_index = 5
-position = Vector2(-600, 583)
+position = Vector2(-1396, -540)
 collision_layer = 2
 script = ExtResource("11_fldb1")
 

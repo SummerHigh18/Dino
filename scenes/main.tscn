@@ -863,6 +863,7 @@ autoplay = "default"
 frame_progress = 0.5099842
 
 [node name="Heart" parent="." unique_id=1191912140 instance=ExtResource("10_yc10j")]
+visible = false
 position = Vector2(1684, 388)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Heart" unique_id=1715291270]
